@@ -13,6 +13,7 @@ window.onload = function() {
 let pronoun = ['the', 'our'];
 let adj = ['great', 'big'];
 let noun = ['jogger', 'racoon'];
+let ext = ['.com', '.net', '.us', '.io']
 
 function generarDominio(){
   let dominio = [];
@@ -20,7 +21,9 @@ function generarDominio(){
   for (let i = 0; i < pronoun.length; i++) {
     for (let j = 0; j < adj.length; j++) {
         for (let k = 0; k < noun.length; k++) {
-          dominio.push(pronoun[i] + adj[j] + noun[k] + ".com");
+          for ( let x = 0; x < ext.length; x++){
+            dominio.push(pronoun[i] + adj[j] + noun[k] + ext[x]);
+          }
       }
     }
   }
