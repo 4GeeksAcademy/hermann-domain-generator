@@ -1,1 +1,11 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body{
+    background-color: #000;
+}
+.contenedor{
+    padding: 2%;
+    background-color:#fff ;
+    width: 800px;
+    margin: 40px auto;
+    border-radius: 15px;
+}
