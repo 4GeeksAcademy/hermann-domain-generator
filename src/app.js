@@ -53,28 +53,27 @@ window.onload = function() {
   generarCarta(posts);
 };
 
-function generarCarta(posts){
+function generarCarta(posts) {
+  const baseUrl = "https://randomuser.me/api/portraits/women/";
+
   let tarjetas = document.getElementById('tarjetas');
   tarjetas.innerHTML = '';
 
   posts.forEach(post => {
-    const tarjeta = document.createElement('div');
-    tarjeta.classList.add('tarjeta');
+      const tarjeta = document.createElement('div');
+      tarjeta.classList.add('col-md-4', 'mb-4');
 
-    const img = document.createElement('img');
-    img.src = `https://randomuser.me/api/portraits/men/${post.id}.jpg`
+      tarjeta.innerHTML = `
+          <div class="card">
+              <img src="${baseUrl}${post.id}.jpg" class="card-img-top">
+              <div class="card-body">
+                  <h5 class="card-title">${post.title}</h5>
+                  <p class="card-text">${post.body}</p>
+              </div>
+          </div>
+      `;
 
-    const nombre = document.createElement('h2');
-    nombre.textContent = post.title;
-
-    const descrip = document.createElement('p');
-    descrip.textContent = post.body;
-
-    tarjeta.appendChild(nombre);
-    tarjeta.appendChild(img);
-    tarjeta.appendChild(descrip);
-
-    tarjetas.appendChild(tarjeta);
+      tarjetas.appendChild(tarjeta);
   });
 }
 
