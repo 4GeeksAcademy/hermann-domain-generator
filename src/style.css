@@ -1,11 +1,24 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-body{
-    background-color: #000;
+.tarjetas{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.contenedor{
-    padding: 2%;
-    background-color:#fff ;
-    width: 800px;
-    margin: 40px auto;
-    border-radius: 15px;
+
+.tarjeta {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    width: 300px;
+}
+.tarjeta img{
+    width: 100%;
+    object-fit: cover;
+    margin: 20px 0px;
 }
